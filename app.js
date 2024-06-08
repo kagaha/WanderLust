@@ -97,7 +97,9 @@ app.use("/listings",listingRouter);
 app.use("/listings/:id/review",reviewRouter);
 app.use("/",userRouter);
 
-
+app.get("/privacy",(req,res)=>{
+  res.render("listings/privacy.ejs");
+});
 //error handling
 app.all("*",(req,res,next)=>{
   next(new ExpressError(404,"Page Not found"));
