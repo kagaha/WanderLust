@@ -100,6 +100,9 @@ app.use("/",userRouter);
 app.get("/privacy",(req,res)=>{
   res.render("listings/privacy.ejs");
 });
+app.get("/terms",(req,res)=>{
+  res.render("listings/privacy.ejs");
+});
 //error handling
 app.all("*",(req,res,next)=>{
   next(new ExpressError(404,"Page Not found"));
