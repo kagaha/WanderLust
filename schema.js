@@ -21,8 +21,8 @@ module.exports.listingSchema=Joi.object({
         country:Joi.string().required(),
         image:Joi.string().allow("",null),
         category: Joi
-        .string()
-        .valid(...categoryOptions)
+        .array().items(Joi.string()
+        .valid(...categoryOptions))
         .required(),
     }).required()
 });
