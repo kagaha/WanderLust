@@ -125,7 +125,7 @@ body{
     height:3.5rem;
     display:flex;
     align-items:center;
-    margin-left:3.5rem;
+    margin-left:auto;
     padding:1rem !important;
 
 }
@@ -135,6 +135,10 @@ body{
 .fliter a{
     text-decoration: none !important;
     color:black;
+}
+.btn2{
+    margin-top:2rem !important;
+    background-color: #fe424d !important;
 }
 @media screen and (max-width:800px){
     .fliter{

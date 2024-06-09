@@ -33,7 +33,23 @@
                     <div class="invalid-feedback">Location must be Entered</div>
                     </div>
                 </div>
-                
+                <div class="mb-3">
+                    <label for="exampleDataList" class="form-label">category</label>
+                    <select class="form-select form-control" name="listing[category]" required>
+                        <option value="" disabled selected>Select a category</option>
+                        <option value="Trending">Trending</option>
+                        <option value="Boats">Boats</option>
+                        <option value="Rooms">Rooms</option>
+                        <option value="Camping">Camping</option>
+                        <option value="Towers">Towers</option>
+                        <option value="Beach">Beach</option>
+                        <option value="Pools">Pools</option>
+                        <option value="Mountains">Mountains</option>
+                        <option value="castle">castle</option>
+                        <option value="Farms">Farms</option>
+                        <option value="Mountain-city">Mountain-city</option>
+                    </select>
+                </div>
                 <div class="mb-3">
                     <label for="country" class="form-label">Country</label>
                     <input type="text" name="listing[country]" placeholder="India" class="form-control"required>
