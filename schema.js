@@ -1,4 +1,17 @@
 const Joi = require('joi');
+const categoryOptions = [
+    "Trending",
+    "Boats",
+    "Rooms",
+    "Camping",
+    "Towers",
+    "Beach",
+    "Pools",
+    "Mountains",
+    "castle",
+    "Farms",
+    "Mountain-city",
+  ];
 module.exports.listingSchema=Joi.object({
     listing:Joi.object({
         title:Joi.string().required(),
@@ -6,8 +19,11 @@ module.exports.listingSchema=Joi.object({
         price:Joi.number().required().min(0),
         location:Joi.string().required(),
         country:Joi.string().required(),
-        image:Joi.string().allow("",null)
-
+        image:Joi.string().allow("",null),
+        category: Joi
+        .string()
+        .valid(...categoryOptions)
+        .required(),
     }).required()
 });
 module.exports.reviewSchema=Joi.object({

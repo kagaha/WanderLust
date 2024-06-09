@@ -33,6 +33,10 @@ const listSchema=new mongoose.Schema({
           required: true
         }
     },
+    category:[{
+        type:String,
+        enum:["Trending","Boats","Rooms","Camping","Towers","Beach","Pools","Mountains","castle","Farms","Mountain-city"],
+    }],
     review:[{
         type:Schema.Types.ObjectId,
         ref:"Review"

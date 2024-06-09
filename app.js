@@ -19,6 +19,7 @@ const ExpressError=require("./utils/expressError.js");
 const listingRouter=require("./routes/listing.js");
 const reviewRouter=require("./routes/review.js");
 const userRouter=require("./routes/user.js");
+const iconRouter=require("./routes/icons.js");
 const session=require("express-session");
 const MongoStore = require('connect-mongo');
 const flash=require("connect-flash");
@@ -84,7 +85,8 @@ next();
 });
 app.get("/listings/mountain",(req,res)=>{
   res.send("Done");
-})
+});
+app.use("/listings",iconRouter);
 // app.get("/getUser",async(req,res)=>{
 //   let fakeUser=new User({
 //     email:"Ruthik@gmail.com",
